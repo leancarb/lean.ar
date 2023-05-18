@@ -1,0 +1,45 @@
+// // Lavender complete shade
+// --background-1: hsla(240, 32%, 8%, 0.075);
+// --black-1: hsl(240, 33%, 4%);
+// --black-2: hsl(248, 37%, 8%);
+// --black-3: hsl(244, 34%, 16%);
+// --dark-lavender-1: hsl(247, 35%, 20%);
+// --dark-lavender-2: hsl(246, 35%, 24%);
+// --dark-lavender-3: hsl(246, 35%, 28%);
+// --dark-lavender-4: hsl(246, 35%, 32%);
+// --dark-lavender-5: hsl(246, 35%, 36%);
+// --neutral-lavender-1: hsl(246, 35%, 40%);
+// --neutral-lavender-2: hsl(246, 35%, 44%);
+// --neutral-lavender-3: hsl(246, 35%, 48%);
+// --neutral-lavender-4: hsl(246, 35%, 52%);
+// --neutral-lavender-5: hsl(245, 35%, 56%);
+// --neutral-lavender-6: hsl(246, 35%, 60%);
+// --neutral-lavender-7: hsl(246, 35%, 62%); // SOUR
+// --light-lavender-1: hsl(246, 35%, 68%);
+// --light-lavender-2: hsl(246, 35%, 72%);
+// --light-lavender-3: hsl(247, 35%, 76%);
+// --light-lavender-4: hsl(247, 35%, 80%);
+// --light-lavender-5: hsl(246, 34%, 84%);
+// --white-1: hsl(246, 34%, 88%);
+// --white-2: hsl(248, 37%, 92%);
+// --white-3: hsl(249, 33%, 96%);
+
+:root {
+  // Colors
+  --lavender-white: hsl(249, 33%, 96%);
+  --lavender-lighter: hsl(247, 35%, 80%);
+  --lavender-light: hsl(246, 35%, 62%);
+  --lavender: hsl(248, 35%, 40%);
+  --lavender-dark: hsl(246, 35%, 24%);
+  --lavender-darker: hsl(240, 31%, 16%);
+  --lavender-bg: hsla(240, 32%, 8%, 0.075);
+  --lavender-black: hsl(240, 32%, 8%);
+
+  // Social icons colors
+  --website: hsl(151, 100%, 44%);
+  --github: hsl(213, 13%, 16%);
+  --linkedin: hsl(201, 100%, 35%);
+
+  // Transitions
+  --transition: all 150ms;
+}

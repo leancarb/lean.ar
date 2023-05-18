@@ -1,0 +1,52 @@
+@use "../util" as *;
+
+.footer {
+  padding-bottom: rem(16);
+
+  &__socials {
+    margin-bottom: rem(10);
+
+    &--ul {
+      display: flex;
+      justify-content: center;
+      gap: rem(14);
+
+      list-style: none;
+    }
+  }
+
+  &__paragraph {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: rem(12);
+
+    @media (prefers-color-scheme: light) {
+      color: var(--lavender-dark);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--lavender-lighter);
+    }
+  }
+}
+
+.icon {
+  font-size: rem(20);
+  color: var(--lavender-light);
+
+  &-website:hover {
+    color: var(--website);
+  }
+
+  &-github:hover {
+    color: var(--github);
+  }
+
+  &-linkedin:hover {
+    color: var(--linkedin);
+  }
+
+  &:hover {
+    transition: var(--transition);
+  }
+}

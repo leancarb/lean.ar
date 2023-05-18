@@ -1,0 +1,30 @@
+@use "../util" as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  color: var(--lavender-black);
+
+  @media (prefers-color-scheme: light) {
+    background-color: var(--lavender-bg);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--lavender-black);
+  }
+}
