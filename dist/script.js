@@ -1,2 +1,2 @@
-"use strict";var currentYear=(new Date).getFullYear(),copyright=document.querySelector(".footer__paragraph");copyright.innerHTML="leandro carbonetti &mdash; 2023";
+"use strict";var moonIcon=document.querySelector("#moon"),lightModeIcon="moon",darkModeIcon="sunny",modeToggle=document.querySelector(".nav__toggle");modeToggle.addEventListener("click",(function(){var o;o=moonIcon.getAttribute("name")===lightModeIcon?darkModeIcon:lightModeIcon,moonIcon.setAttribute("name",o),isDarkMode=!isDarkMode,isDarkMode?(applyDarkMode(),setBodyBackgroundColor()):applyLightMode()}));var currentYear=(new Date).getFullYear(),copyright=document.querySelector(".footer__paragraph");copyright.innerHTML="leandro carbonetti &mdash; 2023";
 //# sourceMappingURL=script.js.map

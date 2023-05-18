@@ -1,79 +1,120 @@
-// // Dark mode button
-// const toggle = document.querySelector(".nav__toggle");
+// Light/dark icon
+const moonIcon = document.querySelector("#moon");
+const lightModeIcon = "moon";
+const darkModeIcon = "sunny";
+
+// Dark mode
+const modeToggle = document.querySelector(".nav__toggle");
+
+// let isDarkMode = window.matchMedia("(prefers-colo-scheme: dark)").matches;
+
+modeToggle.addEventListener("click", () => {
+  // Change icon sun/moon
+  const currentIcon = moonIcon.getAttribute("name");
+  let newIcon;
+  if (currentIcon === lightModeIcon) {
+    newIcon = darkModeIcon;
+  } else {
+    newIcon = lightModeIcon;
+  }
+  moonIcon.setAttribute("name", newIcon);
+  isDarkMode = !isDarkMode;
+  if (isDarkMode) {
+    applyDarkMode();
+    setBodyBackgroundColor();
+  } else {
+    applyLightMode();
+  }
+});
+
+// // Consts DOM
+// const body = document.body;
 // const main = document.querySelector(".main");
 // const mainAboutMe = document.querySelector(".main__about-me");
-// const mainContactMe = document.querySelector(".main__about-me--anchor");
+// const mainAnchorLink = document.querySelector(".main__about-me--anchor");
 // const mainName = document.querySelector(".main__name");
 // const footerParagraph = document.querySelector(".footer__paragraph");
-// const body = document.body;
+// const githubIcon = document.querySelector(".icon-github");
 
-// // Light/dark icon
-// const moonIcon = document.querySelector("#moon");
-// const lightModeIcon = "moon";
-// const darkModeIcon = "sunny";
+// Apply light mode function
+// function applyLightMode() {
+//   body.style.backgroundColor = "var(--lavender-bg)";
+//   modeToggle.style.backgroundColor = "var(--lavender-light)";
+//   modeToggle.style.borderColor = "var(--lavender-lighter)";
+//   // Toggle hover
+//   modeToggle.addEventListener("mouseenter", () => {
+//     modeToggle.style.backgroundColor = "var(--lavender)";
+//   });
+//   modeToggle.addEventListener("mouseleave", () => {
+//     modeToggle.style.backgroundColor = "";
+//   });
 
-// // function add dark class
-// const addDark = function () {
-//   body.classList.add("dark");
-//   toggle.classList.add("dark");
-//   main.classList.add("dark");
-//   mainAboutMe.classList.add("dark");
-//   mainContactMe.classList.add("dark");
-//   mainName.classList.add("dark");
-//   footerParagraph.classList.add("dark");
-// };
-// // function toggle dark class
-// const toggleDark = function () {
-//   body.classList.toggle("dark");
-//   toggle.classList.toggle("dark");
-//   main.classList.toggle("dark");
-//   mainAboutMe.classList.toggle("dark");
-//   mainContactMe.classList.toggle("dark");
-//   mainName.classList.toggle("dark");
-//   footerParagraph.classList.toggle("dark");
-// };
-// // function remove dark class
-// const removeDark = function () {
-//   body.classList.remove("dark");
-//   toggle.classList.remove("dark");
-//   main.classList.remove("dark");
-//   mainAboutMe.classList.remove("dark");
-//   mainContactMe.classList.remove("dark");
-//   mainName.classList.remove("dark");
-//   footerParagraph.classList.remove("dark");
-// };
+//   main.style.backgroundColor = "var(--lavender-white)";
+//   mainAboutMe.style.color = "var(--lavender-black)";
+//   // Contact me hover
+//   mainAnchorLink.addEventListener("mouseenter", () => {
+//     mainAnchorLink.style.color = "var(--lavender)";
+//   });
+//   mainAnchorLink.addEventListener("mouseleave", () => {
+//     mainAnchorLink.style.color = "var(--lavender-light)";
+//   });
 
-// // Local Storage
-// toggle.addEventListener("click", function () {
-//   // Change icon sun/moon
-//   const currentIcon = moonIcon.getAttribute("name");
-//   let newIcon;
-//   if (currentIcon === lightModeIcon) {
-//     newIcon = darkModeIcon;
-//   } else {
-//     newIcon = lightModeIcon;
-//   }
-//   moonIcon.setAttribute("name", newIcon);
+//   mainName.style.color = "var(--lavender-darker)";
+//   footerParagraph.style.color = "var(--lavender-dark)";
+//   // Github hover
+//   githubIcon.addEventListener("mouseenter", () => {
+//     githubIcon.style.color = "var(--github-light)";
+//   });
+//   githubIcon.addEventListener("mouseleave", () => {
+//     githubIcon.style.color = "";
+//   });
+// }
 
-//   const body = document.querySelector("body");
-//   toggleDark();
-//   if (body.classList.contains("dark")) {
-//     localStorage.setItem("darkMode", "on");
-//   } else {
-//     localStorage.setItem("darkMode", "off");
-//   }
-// });
+// // Apply dark mode function
+// function applyDarkMode() {
+//   body.style.backgroundColor = "var(--lavender-darker)";
+//   modeToggle.style.backgroundColor = "var(--lavender)";
+//   modeToggle.style.borderColor = "var(--lavender-light)";
+//   // Toggle hover
+//   modeToggle.addEventListener("mouseleave", () => {
+//     modeToggle.style.backgroundColor = "var(--lavender-dark)";
+//   });
+//   modeToggle.addEventListener("mouseenter", () => {
+//     modeToggle.style.backgroundColor = "";
+//   });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const darkMode = localStorage.getItem("darkMode");
-//   if (darkMode === "on") {
-//     addDark();
-//   } else {
-//     removeDark();
-//   }
-// });
+//   main.style.backgroundColor = "var(--lavender-dark)";
+//   mainAboutMe.style.color = "var(--lavender-lighter)";
+//   // Contact me hover
+//   mainAnchorLink.addEventListener("mouseenter", () => {
+//     mainAnchorLink.style.color = "var(--lavender-lighter)";
+//   });
+//   mainAnchorLink.addEventListener("mouseleave", () => {
+//     mainAnchorLink.style.color = "var(--lavender-light)";
+//   });
+//   mainName.style.color = "var(--lavender-light)";
+//   footerParagraph.style.color = "var(--lavender-lighter)";
+//   // Github hover
+//   githubIcon.addEventListener("mouseenter", () => {
+//     githubIcon.style.color = "var(--github-dark)";
+//   });
+//   githubIcon.addEventListener("mouseleave", () => {
+//     githubIcon.style.color = "";
+//   });
+// }
 
 // Footer text
 const currentYear = new Date().getFullYear();
 const copyright = document.querySelector(".footer__paragraph");
 copyright.innerHTML = `leandro carbonetti &mdash; 2023`;
+
+// // MediaQuery for body bg
+// const mobileMediaQueria = window.matchMedia("(max-width: 40em)");
+
+// function setBodyBackgroundColor() {
+//   if (mobileMediaQueria.matches) {
+//     body.style.backgroundColor = "var(--lavender-dark)";
+//   } else {
+//     main.backgroundColor = "var(--lavender-darker)";
+//   }
+// }

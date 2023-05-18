@@ -1,6 +1,7 @@
 @use "../util" as *;
 
 .nav {
+  // position: absolute;
   visibility: hidden; // TOGGLE HIDDEN
   display: flex;
   justify-content: flex-end;
@@ -9,16 +10,34 @@
   &__toggle {
     border: none;
     border-radius: rem(16);
-    border: rem(2) solid lavender;
     padding: rem(12) rem(24);
+
+    @media (prefers-color-scheme: light) {
+      background-color: var(--lavender-light);
+      border: rem(2) solid var(--lavender-lighter);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--lavender);
+      border: rem(2) solid var(--lavender-light);
+    }
 
     &:hover {
       cursor: pointer;
       transition: var(--transition);
+
+      @media (prefers-color-scheme: light) {
+        background-color: var(--lavender);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        background-color: var(--lavender-dark);
+      }
     }
 
     &--icon {
       font-size: rem(18);
+      color: var(--lavender-white);
     }
   }
 }

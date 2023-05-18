@@ -39,7 +39,11 @@
   }
 
   &-github:hover {
-    color: var(--github);
+    color: var(--github-light);
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--github-dark);
+    }
   }
 
   &-linkedin:hover {
