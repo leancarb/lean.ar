@@ -106,7 +106,7 @@ modeToggle.addEventListener("click", () => {
 // Footer text
 const currentYear = new Date().getFullYear();
 const copyright = document.querySelector(".footer__paragraph");
-copyright.innerHTML = `leandro carbonetti &mdash; 2023`;
+copyright.innerHTML = `leandro carbonetti &mdash; ${currentYear}`;
 
 // // MediaQuery for body bg
 // const mobileMediaQueria = window.matchMedia("(max-width: 40em)");
